@@ -1,0 +1,26 @@
+package javatest;
+
+public class PostCodeChecker {
+
+	static int inputPostCode;
+	
+	public static String GetPostCodeFromList(String[] list) {
+		var result = "";
+
+		for (int i = 0; i < list.length; i++) {
+			if (list[i].matches("\\d{7}")) {
+				
+				result = "[" + (i + 1) + "]”Ô–Ú‚Ì•¶Žš—ñ[" + list[i] + "]‚Í—X•Ö”Ô†‚Å‚ ‚éB";		
+				inputPostCode = Integer.parseInt(list[i]);
+			};	
+		}
+
+		result = result.isEmpty() ? "—X•Ö”Ô†‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB—X•Ö”Ô†‚ÍA7Œ…‚Ì”Žš‚Å‚ ‚éB" : result;
+
+		return result;
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="divParent">
+        <div id="div1" class="divSize">A</div>
+        <div id="div2" class="divSize">B</div>
+        <div id="div3" class="divSize">C</div>
+    </div>
+</body>
+
+<style>
+.divSize {
+    width: 100px; 
+    height: 100px; 
+    border: 1px black solid;
+    font-size: 40px;
+}
+
+.divParent {
+    width: 200px;
+    height: 200px;
+    border: 1px black solid;
+    position: relative;
+}
+
+
+#div1 {
+    position: absolute;
+    z-index: 3;
+}
+#div2 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+}
+#div3 {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    z-index: 1;
+}
+
+
+#div1 {background-color: red;}
+#div2 {background-color: blue;}
+#div3 {background-color: green;}
+
+
+</style>
+</html>

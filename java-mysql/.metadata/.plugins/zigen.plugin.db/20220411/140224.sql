@@ -1,0 +1,1 @@
+create schema java_mysql_test2

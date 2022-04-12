@@ -1,0 +1,43 @@
+package javatest;
+
+public class PostCodeChecker {
+
+	static int inputPostCode;
+
+	public static String GetPostCodeFromList(String[] list) {
+
+		var result = "";
+
+		for (int i = 0; i < list.length; i++) {
+			if (list[i].matches("\\d{7}")) {
+
+				result = "[" + (i + 1) + "]”Ô–Ú‚Ì•¶Žš—ñ[" + list[i] + "]‚Í—X•Ö”Ô†‚Å‚ ‚éB";
+				inputPostCode = Integer.parseInt(list[i]);
+				break;
+
+			}
+		}
+
+		result = result.isEmpty() ? "—X•Ö”Ô†‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB—X•Ö”Ô†‚ÍA7Œ…‚Ì”Žš‚Å‚ ‚éB" : result;
+		return result;
+	}
+
+	static String SearchPostCode(int inputPostCode) {
+
+		var result = "ŠY“–—X•Ö”Ô†‚ÍŒ©‚Â‚©‚ç‚È‚©‚Á‚½B";
+
+		for (int i = 0; i < AddressTableManager.tableList.size(); i++) {
+			for (int j = 0; j < AddressTableManager.tableList.get(i).getTable().size(); j++) {
+				var table = AddressTableManager.tableList.get(i).getTable();
+
+				if (table.containsKey(inputPostCode)) {
+					result = "u—X•Ö”Ô†‚Íƒe[ƒuƒ‹[" + (i + 1) + "]‚É‚ ‚èA’¬–¼‚Í[" + table.get(inputPostCode) + "]‚Å‚ ‚éB";
+					break;
+				}
+			}
+		}
+
+		return result;
+	}
+
+}

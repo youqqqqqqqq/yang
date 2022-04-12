@@ -1,0 +1,48 @@
+package javatest;
+
+import java.util.Scanner;
+
+public class InputHandler {
+
+	static Scanner scan = new Scanner(System.in);
+
+	public static String GetInput(Scanner scan) {
+
+		System.out.println("•¶š—ñ‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢:");
+		var input = scan.nextLine();
+		return input;
+
+	}
+
+	public static int GetInputPostCode(Scanner scan) {
+
+		System.out.println("—X•Ö”Ô†(‚VŒ…)‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢:");
+
+		try {
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		var input = scan.nextInt();
+		return input;
+	}
+
+	public static String[] ChangeInputToArray(String input) {
+
+		return input.split(",");
+	}
+
+	public static void PrintInputList(String[] inputList) {
+
+		System.out.print("“ü—Í‚µ‚½strList‚Í[");
+
+		for (int i = 0; i < inputList.length; i++) {
+			if (i == (inputList.length - 1)) {
+				System.out.println(inputList[i] + "]‚Å‚·B");
+				break;
+			}
+			System.out.print(inputList[i] + ",");
+		}
+	}
+}

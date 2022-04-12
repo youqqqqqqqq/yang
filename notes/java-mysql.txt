@@ -1,0 +1,8 @@
+DBViewerのインストール
+https://qiita.com/nkojima/items/2a865b819071e7943761
+
+DB viewer
+http://www.ne.jp/asahi/zigen/home/plugin/dbviewer/about_jp.html
+
+JConnector
+https://dev.mysql.com/downloads/connector/j/

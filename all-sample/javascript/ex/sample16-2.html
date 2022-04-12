@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .testABC{
+            font-size: 50px;
+        }
+
+        .testEFG{
+            font-size: 20px;
+        }
+    </style>
+
+    <p id="test123" class="testABC">Hello world</p>
+    <input type="button" value="Click" onclick="myfunc()">
+
+    <script>
+        function myfunc(){
+            let myh2 = document.getElementById("test123");
+            myh2.classList.toggle("testABC");
+            myh2.classList.add("testDEF");
+        }        
+    </script>
+    
+</body>
+</html>

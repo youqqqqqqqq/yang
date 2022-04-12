@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="16.0.1" class="java.beans.XMLDecoder">
+ <object class="java.util.LinkedList">
+  <void method="add">
+   <object class="zigen.plugin.db.core.SQLHistory">
+    <void property="config">
+     <object class="zigen.plugin.db.core.DBConfig">
+      <void property="charset">
+       <string></string>
+      </void>
+      <void property="classPaths">
+       <array class="java.lang.String" length="1" id="StringArray0">
+        <void index="0">
+         <string>C:\Program Files (x86)\MySQL\Connector J 8.0\mysql-connector-java-8.0.28.jar</string>
+        </void>
+       </array>
+      </void>
+      <void property="convertUnicode">
+       <boolean>true</boolean>
+      </void>
+      <void property="dbName">
+       <string>MySQL</string>
+      </void>
+      <void property="dbType">
+       <int>2</int>
+      </void>
+      <void property="driverName">
+       <string>com.mysql.cj.jdbc.Driver</string>
+      </void>
+      <void property="filterPattern">
+       <string></string>
+      </void>
+      <void property="noLockMode">
+       <boolean>true</boolean>
+      </void>
+      <void property="password">
+       <string>itjob</string>
+      </void>
+      <void property="schema">
+       <string></string>
+      </void>
+      <void property="url">
+       <string>jdbc:mysql://localhost:3306/</string>
+      </void>
+      <void property="userId">
+       <string>root</string>
+      </void>
+     </object>
+    </void>
+    <void property="date">
+     <object class="java.util.Date">
+      <long>1649652567168</long>
+     </object>
+    </void>
+    <void property="fileMode">
+     <boolean>true</boolean>
+    </void>
+    <void property="sql">
+     <string>create database java_mysql_test;</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="zigen.plugin.db.core.SQLHistory">
+    <void property="config">
+     <object class="zigen.plugin.db.core.DBConfig" id="DBConfig0">
+      <void property="charset">
+       <string></string>
+      </void>
+      <void property="classPaths">
+       <object idref="StringArray0"/>
+      </void>
+      <void property="convertUnicode">
+       <boolean>true</boolean>
+      </void>
+      <void property="dbName">
+       <string>MySQL</string>
+      </void>
+      <void property="dbType">
+       <int>2</int>
+      </void>
+      <void property="driverName">
+       <string>com.mysql.cj.jdbc.Driver</string>
+      </void>
+      <void property="filterPattern">
+       <string></string>
+      </void>
+      <void property="noLockMode">
+       <boolean>true</boolean>
+      </void>
+      <void property="password">
+       <string>itjob</string>
+      </void>
+      <void property="schema">
+       <string></string>
+      </void>
+      <void property="url">
+       <string>jdbc:mysql://localhost:3306/</string>
+      </void>
+      <void property="userId">
+       <string>root</string>
+      </void>
+     </object>
+    </void>
+    <void property="date">
+     <object class="java.util.Date">
+      <long>1649652998793</long>
+     </object>
+    </void>
+    <void property="fileMode">
+     <boolean>true</boolean>
+    </void>
+    <void property="sql">
+     <string>drop database java_mysql_test</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="zigen.plugin.db.core.SQLHistory">
+    <void property="config">
+     <object idref="DBConfig0"/>
+    </void>
+    <void property="date">
+     <object class="java.util.Date">
+      <long>1649653002455</long>
+     </object>
+    </void>
+    <void property="fileMode">
+     <boolean>true</boolean>
+    </void>
+    <void property="sql">
+     <string>create schema java_mysql_test;</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="zigen.plugin.db.core.SQLHistory">
+    <void property="config">
+     <object class="zigen.plugin.db.core.DBConfig" id="DBConfig1">
+      <void property="charset">
+       <string></string>
+      </void>
+      <void property="classPaths">
+       <object idref="StringArray0"/>
+      </void>
+      <void property="convertUnicode">
+       <boolean>true</boolean>
+      </void>
+      <void property="dbName">
+       <string>MySQL</string>
+      </void>
+      <void property="dbType">
+       <int>2</int>
+      </void>
+      <void property="driverName">
+       <string>com.mysql.cj.jdbc.Driver</string>
+      </void>
+      <void property="filterPattern">
+       <string></string>
+      </void>
+      <void property="noLockMode">
+       <boolean>true</boolean>
+      </void>
+      <void property="password">
+       <string>itjob</string>
+      </void>
+      <void property="schema">
+       <string></string>
+      </void>
+      <void property="url">
+       <string>jdbc:mysql://localhost:3306/</string>
+      </void>
+      <void property="userId">
+       <string>root</string>
+      </void>
+     </object>
+    </void>
+    <void property="date">
+     <object class="java.util.Date">
+      <long>1649653226672</long>
+     </object>
+    </void>
+    <void property="fileMode">
+     <boolean>true</boolean>
+    </void>
+    <void property="sql">
+     <string>use java_mysql_test;</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="zigen.plugin.db.core.SQLHistory">
+    <void property="config">
+     <object idref="DBConfig1"/>
+    </void>
+    <void property="date">
+     <object class="java.util.Date">
+      <long>1649653344580</long>
+     </object>
+    </void>
+    <void property="fileMode">
+     <boolean>true</boolean>
+    </void>
+    <void property="sql">
+     <string>create schema java_mysql_test2</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="zigen.plugin.db.core.SQLHistory">
+    <void property="config">
+     <object idref="DBConfig1"/>
+    </void>
+    <void property="date">
+     <object class="java.util.Date">
+      <long>1649653385496</long>
+     </object>
+    </void>
+    <void property="fileMode">
+     <boolean>true</boolean>
+    </void>
+    <void property="sql">
+     <string>create database java_mysql_test3</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

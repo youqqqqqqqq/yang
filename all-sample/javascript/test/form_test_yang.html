@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sytle.css">
+    <title>社員基本情報一覧</title>
+</head>
+
+<body>
+    <h1>社員基本情報一覧</h1><br>
+
+    <div class="main">
+        <form class="search-part border-padding" action="" >
+            姓名<input id="search_name_area" value="" type="text">
+            <button onclick="click_search_btn(); return false;">社員検査</button>
+        </form>
+
+        <div class="table-part border-padding" >
+            <table id="info_table">
+                <tr>
+                    <th>社員番号</th>
+                    <th>姓名</th>
+                    <th>生年月日</th>
+                    <th>国籍</th>
+                    <th>性別</th>
+                    <th colspan="2">操作</th>
+                </tr>
+                <tr>
+                    <td>111111</td>
+                    <td class="list-table-name">
+                        <a href="https://www.google.com">山田花子</a>      
+                    </td>
+                    <td>1990-01-12</td>
+                    <td>日本</td>
+                    <td>女性</td>
+                    <td><button onclick="click_delete_btn();">削除</button></td>
+                    <td><button onclick="click_change_btn();">変更</button></td>
+                </tr>
+                <tr>
+                    <td>222222</td>
+                    <td class="list-table-name">
+                       <a href="https://www.google.com">彭于妟</a>         
+                    </td>
+                    <td>1911-11-24</td>
+                    <td>中国</td>
+                    <td>女性</td>
+                    <td><button onclick="click_delete_btn();">削除</button></td>
+                    <td><button onclick="click_change_btn();">変更</button></td>
+                </tr>
+                <tr>
+                    <td>333333</td>
+                    <td class="list-table-name">
+                       <a href="https://www.google.com">Damon</a>         
+                    </td>
+                    <td>1992-05-16</td>
+                    <td>アメリカ</td>
+                    <td>不明</td>
+                    <td><button onclick="click_delete_btn();">削除</button></td>
+                    <td><button onclick="click_change_btn();">変更</button></td>
+
+                    <a href=""></a>
+                </tr>
+            </table>
+        </div>
+
+        <form action="" class="input-part border-padding hide" onsubmit="return false">
+            <table class="input-table">
+                <tr>
+                    <td>社員番号</td>
+                    <td><input id="input_table_number" type="text"></td>
+                </tr>
+                <tr>
+                    <td>姓名</td>
+                    <td><input id="input_table_name" type="text"></td>
+                </tr>
+                <tr>
+                    <td>生年月日</td>
+                    <td><input id="input_table_brithday" type="text"></td>
+                </tr>
+                <tr>
+                    <td>国籍</td>
+                    <td><input id="input_table_country" type="text"></td>
+                </tr>
+                <tr>
+                    <td>性別</td>
+                    <td><input id="input_table_sex" type="text"></td>
+                </tr>
+            </table>
+            <button id="ok_button" onclick="click_ok_btn();return false;">確認</button>
+        </form>
+    </div>
+
+    <footer>Softusing.co.jp</footer>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

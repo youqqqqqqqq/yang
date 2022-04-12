@@ -1,0 +1,8 @@
+
+public class JSample7_4 {
+	public static void main(String[] args) {
+		String str = "“ú–{Œê";
+		System.out.println("•¶Žš—ñ: " + str);
+		System.out.println("•¶Žš—ñ‚Ì’·‚³‚Í: " + str.length());
+	}
+}

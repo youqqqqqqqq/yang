@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 123;
+        document.write('2 == "1"の結果：',(2 == "1"),'<br/>'); //false
+        document.write('String(2)の結果：' , String(2), '<br/>'); //2
+        document.write('a=123,a.toString()の結果：' , a.toString(), '<br/>'); //123
+
+        document.write("</br>");
+
+        document.write(Number(true)+"<br/>");   //1
+        document.write(Number(false)+"<br/>");  //0 
+        document.write(Number(null)+"<br/>");   //0
+        document.write(Number(undefined)+"<br/>"); //0 
+        document.write(Number("001")+"<br/>"); //NaN
+        document.write(Number("001.1")+"<br/>"); //1.1
+        document.write(Number("0x10")+"<br/>");  //16
+        document.write(Number(new String("11aa"))+"<br/>"); //NaN
+
+
+        document.write("</br>");
+
+        document.write(parseInt("1")+"<br/>"); //1 
+        document.write(parseInt("  1")+"<br/>"); //1
+        document.write(parseInt("1.1")+"<br/>"); //1
+        document.write(parseInt("11aa")+"<br/>"); //11 
+        document.write(parseInt("020")+"<br/>"); //20 
+        document.write(parseInt("")+"<br/>");  //NaN 
+        document.write(parseInt("AF")+"<br/>");  //NaN
+        document.write(parseInt("AF",16)+"<br/>"); //175
+        document.write(parseInt("0xAF")+"<br/>"); //175
+
+
+
+    </script>
+</body>
+</html>

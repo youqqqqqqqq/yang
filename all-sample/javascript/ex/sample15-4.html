@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="chbox">
+        あなたの好きなスポーツは？(複数可)<br>
+        <input type="checkbox" value="サッカー">サッカー<br>
+        <input type="checkbox" value="バスケットボール">バスケットボール<br>
+        <input type="checkbox" value="ジョギング">ジョギング<br>
+        <input type="checkbox" value="水泳">水泳<br>
+        <input type="checkbox" value="他">この中には無い<br>
+        <input type="button" value="確認" onclick="boxCheck()">
+    </form>
+
+    <script>
+
+
+        function boxCheck() {
+
+            let str = "";
+
+            str = update_str(str);
+
+            showMessage(str);
+
+        }
+
+        function update_str(str){
+            let elems = document.chbox.elements;
+
+            for (let index = 0; index < elems.length - 1; index++) {
+                const element = elems[index];
+                if (element.checked) {
+                    str += (index != elems.length - 2) ? element.value + "," : element.value;
+                }
+            }
+
+            return str;
+        }
+
+        function showMessage(message) {
+            message = (message == "") ? "どれが選択してください" : message + "が選択されました";
+            alert(message);
+        }
+    </script>
+</body>
+
+</html>

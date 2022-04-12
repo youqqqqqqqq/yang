@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createElem(){
+            let p = document.createElement("p");
+            p.tagName = "newP";
+            p.textContent = "ボタンが押されています";
+            document.body.appendChild(p);
+        }
+
+        function deleteElem(){
+            document.body.removeChild(document.querySelectorAll("p")[0]);
+            console.log("delete");
+        }
+    </script>
+
+    <button onmousedown="createElem()" onmouseup="deleteElem()">押してください</button>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+package javatest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// 1.get input
+		var inputLine = InputHandler.GetInput();
+
+		// 2.print list
+		var strList = InputHandler.ChangeInputToArray(inputLine);
+		InputHandler.PrintInputList(strList);
+
+		// 3.1 print post code
+		var postCodeStr = PostCodeChecker.GetPostCodeFromList(strList);
+		System.out.println(postCodeStr);
+
+		// 3.2.1 print address from post code table
+		// create tables
+		AddressTable table1 = new AddressTable();
+		AddressTable table2 = new AddressTable();
+
+		table1.add("’çª", 2100026);
+		table1.add("o—ˆ–ì", 2100825);
+		table1.add("“a’¬", 210081);
+		table1.add("’†“‡", 2100806);
+		table1.add("’†£", 2100818);
+
+		table2.add("–ØŒ", 2110032);
+		table2.add("‘å’¬", 2110031);
+		table2.add("‹_‰€’¬", 2110033);
+		table2.add("Z‹g’¬", 2110021);
+		table2.add("¬™", 2110061);
+
+		// create tables list
+		List<AddressTable> tableList = new ArrayList<AddressTable>();
+		tableList.add(table1);
+		tableList.add(table2);
+
+		// search address form table list
+		
+		
+
+		// 3.2.2 search input post code address
+
+	}
+
+}

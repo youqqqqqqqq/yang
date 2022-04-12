@@ -1,0 +1,19 @@
+package test;
+
+public class AccessTest {
+	public void a() {
+		System.out.println("public");
+	}
+
+	protected void b() {
+		System.out.println("protected");
+	}
+
+	void c() {
+		System.out.println("Cüq‚È‚µ");
+	}
+
+	private void d() {
+		System.out.println("private");
+	}
+}

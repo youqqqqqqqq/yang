@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="sample2_3form">
+        <input type="radio" name="radio" value="ラジオ１"> ラジオ１<br>
+        <input type="radio" name="radio" value="ラジオ２"> ラジオ２<br>
+        <input type="radio" name="radio" value="ラジオ３"> ラジオ３<br>
+        <input type="button" name="button" value="選択" id="" onclick="check()">
+    </form>
+    <script>
+        function check() {    
+            let radios = document.sample2_3form.elements;
+
+            for (let index = 0; index < radios.length; index++) {
+                const element = radios[index];
+                    if (element.checked) {
+                        if (element.name != "radio") return;
+                        alert(element.value + "が選択された");
+                    }
+            }
+        }
+    </script>
+</body>
+
+</html>

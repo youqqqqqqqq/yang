@@ -1,0 +1,27 @@
+package javatest;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// 1.get input
+
+		var inputLine = InputHandler.GetInput();
+
+		// 2.print list
+
+		var strList = InputHandler.ChangeInputToArray(inputLine);
+		InputHandler.PrintInputList(strList);
+
+		// 3.1 get post code
+		
+		var postCodeStr = PostCodeChecker.GetPostCodeFromList(strList);
+		System.out.println(postCodeStr);
+
+		// 3.2.1 print post code address
+
+		// 3.2.2 search post code
+
+	}
+
+}

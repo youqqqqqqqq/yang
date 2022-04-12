@@ -1,0 +1,49 @@
+package JSample;
+
+public class JSample14_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		show(new Cat());
+		show(new Dog());
+		
+	}
+	
+	public static void show(Animal a) {
+		a.eat();
+		
+		if (a instanceof Cat) {
+			Cat c = (Cat)a;
+			c.work();
+		} else if (a instancceof Dog)
+		{			
+			Cat d = (Dog)a;
+			d.work();
+		}
+	}
+	
+}
+
+
+abstract class Animal{
+	abstract void eat();
+}
+
+class Cat extends Animal {
+	public void eat() {
+		System.out.println("Catに食べる?");
+	}
+	public void work() {
+		System.out.println("Catにネズミを捕まえる");
+	}
+}
+
+class Dog extends Animal {
+	public void eat() {
+		System.out.println("Dogに食べる?");	
+	}
+	public void work() {
+		System.out.println("Dogにネズミを捕まえる");
+	}
+}
+

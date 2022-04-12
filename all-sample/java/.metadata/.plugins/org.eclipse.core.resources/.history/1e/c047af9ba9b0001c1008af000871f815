@@ -1,0 +1,17 @@
+
+public class JSample7_7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str1 = new String(" Japan ");
+		System.out.println("Œ³‚Ì•¶š—ñ" + str1 + "‚Å‚·");
+		System.out.println("•¶š”‚Í" + str1.length() + "‚Å‚·");
+
+		String new_str1 = str1.trim();
+		System.out.println("‹ó”’‚ğæ‚èœ‚¢‚½•¶š—ñ" + new_str1 + "‚Å‚·");
+		System.out.println("•¶š”‚Í" + new_str1.length() + "‚Å‚·");
+
+	}
+
+}

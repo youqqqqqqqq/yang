@@ -1,0 +1,1 @@
+drop database java_mysql_test

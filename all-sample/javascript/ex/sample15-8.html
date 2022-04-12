@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="fcset">
+        <input type="text" name="text" value="">
+        <input type="button" name="" value="合わせる" onclick="fc()">
+        <input type="button" name="" value="外す" onclick="bl()">
+    </form>
+
+    <script>
+        function fc(){
+            document.fcset.text.focus();
+        }
+        function bl(){
+            document.fcset.text.blur();
+        }
+    </script>
+</body>
+</html>

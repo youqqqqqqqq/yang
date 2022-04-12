@@ -1,0 +1,21 @@
+package javatest;
+
+import java.util.HashMap;
+
+public class AddressTable {
+
+	private HashMap<String, Integer> table = new HashMap<String, Integer>();
+
+	public HashMap<String, Integer> getTable() {
+		return table;
+	}
+
+	public void add(String address, Integer postCode) {
+		this.table.put(address, postCode);
+	}
+
+	public void remove(String address) {
+		this.table.remove(address);
+	}
+
+}

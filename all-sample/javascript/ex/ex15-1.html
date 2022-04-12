@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form">
+        名前: <input type="text" name="name" value=""> <br>
+        性別: <input type="text" name="sex" value=""> <br>
+        年齢: <input type="text" name="age" value=""> <br>
+        <input type="button" name="btn" value="送信" id="" onclick="check_age()">
+    </form>
+
+    <script>
+        function check_age() {
+            let age = document.form.age.value;
+            if (age.match(/[^0-9]+/)) alert("エラー");
+        }
+    </script>
+
+</body>
+
+</html>

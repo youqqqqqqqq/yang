@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="sent">
+        お名前: <input type="text" value="" name="name" onchange="wupBun()">
+        <br>
+        <br>
+        感想: <input type="text" value="" name="thought" onchange="wupBun()">
+        <br>
+        <br>
+        <input type="button" value="送信" name="btn" disabled>
+    </form>
+    <script>
+        function wupBun(){
+            let name = document.sent.name.value;
+            let thought = document.sent.thought.value;
+            document.sent.btn.disabled = (name == "" || thought == "") ? true : false;
+        }
+    </script>
+</body>
+</html>

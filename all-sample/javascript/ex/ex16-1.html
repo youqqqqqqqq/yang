@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="my_text" style="font-size: 20;">Hello world!</p>
+    <button value="change_button" onclick="change_size()">変更</button>   
+    <button value="expand_button" onclick="expand()">拡大</button>   
+    <button value="shrink_button" onclick="shrink()">縮小</button>   
+
+    <style>
+        .change-size{
+            font-size: 50px;
+        }
+
+    </style>
+
+    <script>
+        function change_size(){
+            document.getElementById("my_text").classList.toggle("change-size");
+        }
+
+        function expand(){
+            document.getElementById("my_text").classList.add("change-size");
+        }
+        function shrink(){
+            document.getElementById("my_text").classList.remove("change-size");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>履歴書</title>
+    <link rel="stylesheet" href="sytle.css">
+</head>
+<body>
+    <div class="head">
+
+        <div class="head_left">
+
+            <div class="title">
+    
+                <h2>履歴書</h2>
+                <p>20xx 年 x 月 現在</p>
+                
+            </div>
+            
+            <table class="t1 outline">
+                <tr><td id="name"> ふりがな </td></tr>
+                <tr style="height : 100px"><td> 氏　名 </td></tr>
+            </table>
+
+
+        </div>
+ 
+        <div class="head_right">
+            
+            <img src="photo.jpeg" alt="">
+
+        </div>
+
+
+    </div>
+
+    <table class="t0 inner">
+        <tr><td>xx年xx月xx日 （xx才） </td><td>男</td></tr>
+    </table>
+
+
+    <table class="t2 outline inner">
+        <tr><td>ふりかな</td><td>電話</td></tr>
+        <tr><td>xxxxxxxxx</td><td>xxxxx</td></tr>
+        <tr><td>ふりかな</td><td>電話</td></tr>
+        <tr><td>xxxxxxxxx</td><td>xxx-xxxx-xxxx</td></tr>
+    </table>
+
+
+    <table class="t3 outline inner">
+    
+        <tr><td>年</td><td>月</td><td>学歴・履歴</td></tr>
+        <tr><td></td><td></td><td>履歴</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+    
+    
+        <tr><td></td><td></td><td>学歴</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+        <tr><td>xxxx</td><td>xx</td><td>oooooooooo</td></tr>
+       
+
+    </table>
+
+    <footer>
+
+        <p>
+            「性別」記載は任意です。未記載とすることも可能です。
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
+
+
+
+
+/* css文档 */
+
+
+body{
+    width: 600px;
+    margin: 0 auto;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.outline{
+    border: 1px solid black;
+}
+
+.inner{
+    width: 100%;
+}
+
+.t0{
+    text-align: center;
+}
+
+.t0 td{
+    height: 30px;
+    border: 1px solid black ;
+}
+
+.t0 td:first-child{
+    width: 496px;
+}
+
+.t0 td:nth-child(2){
+    width: auto;
+}
+
+
+.t1 {
+    width: 100%;
+}
+
+.t1 tr:first-child{
+    border-bottom: 1px dashed gray;
+}
+
+#name{
+    text-align: justify;
+}
+
+
+
+.t2{
+    margin-bottom: 20px;    
+}
+
+.t2 td{    
+    border: 1px solid black;
+    text-align: left;
+}
+
+.t2 tr td:first-child{
+    width: 450px;
+}
+
+
+.t2 tr:nth-child(even) td{
+    height: 60px;
+    text-align: center;
+    border-top: none;
+}
+
+.t2 tr:nth-child(odd) td{
+    border-bottom: 1px dashed gray;
+}
+
+
+.t3{
+    border-collapse : collapse;
+}
+
+.t3 td{    
+    border: 1px solid black;
+    text-align: center;
+}
+
+.t3 tr td:nth-child(1){
+    width: 60px;
+    border-right: 1px dashed rgb(143, 142, 142);
+}
+
+
+.t3 tr td:nth-child(2){
+    width: 100px;
+    border-left: none;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.head_left .title{
+    display: flex;
+    width: 500px;
+    height: 50px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.head_left .title p{
+    font-size: 12px;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.head_right{
+    width: 100%;
+}
+
+.head_right img{
+    display: block;
+    width: 100%;
+    margin-top: 60px;
+}
+
+
+
+
+
+
+

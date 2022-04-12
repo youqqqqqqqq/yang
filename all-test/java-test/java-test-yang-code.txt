@@ -1,0 +1,216 @@
+//Main.java
+package javatest;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// 1.get input
+		var inputLine = InputHandler.GetInput(InputHandler.scan);
+
+		// 2.print list
+		var strList = InputHandler.ChangeInputToArray(inputLine);
+		InputHandler.PrintInputList(strList);
+
+		// 3.1 print post code
+		var getPostCodeResult = PostCodeChecker.GetPostCodeFromList(strList);
+		System.out.println(getPostCodeResult);
+
+		// 3.2.1 print address from post code table
+		// create tables
+		AddressTableManager.createTableList();
+
+		// search address form tables
+		var currentSearchPostCode = PostCodeChecker.inputPostCode;
+		var searchResult = PostCodeChecker.SearchPostCode(currentSearchPostCode);
+		System.out.println(searchResult);
+
+		// 3.2.2 search input post code address
+		var inputPostCode = InputHandler.GetInputPostCode(InputHandler.scan);
+		searchResult = PostCodeChecker.SearchPostCode(inputPostCode);
+		System.out.println(searchResult);
+
+		InputHandler.scan.close();
+
+	}
+
+}
+
+
+
+
+
+//InputHandler.java
+package javatest;
+
+import java.util.Scanner;
+
+public class InputHandler {
+
+	static Scanner scan = new Scanner(System.in);
+
+	public static String GetInput(Scanner scan) {
+
+		System.out.println("文字列を入力してください");
+
+		var input = scan.nextLine();
+
+		return input;
+
+	}
+
+	public static int GetInputPostCode(Scanner scan) {
+
+		System.out.println("郵便番号を入力してください");
+
+		var input = scan.nextInt();
+
+		return input;
+	}
+
+	public static String[] ChangeInputToArray(String input) {
+		return input.split(",");
+	}
+
+	public static void PrintInputList(String[] inputList) {
+		System.out.print("入力したstrListは[");
+
+		for (int i = 0; i < inputList.length; i++) {
+
+			if (i == (inputList.length - 1)) {
+
+				System.out.println(inputList[i] + "]です");
+				break;
+			}
+
+			System.out.print(inputList[i] + ",");
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+//PostCodeChecker.java
+package javatest;
+
+public class PostCodeChecker {
+
+	static int inputPostCode;
+
+	public static String GetPostCodeFromList(String[] list) {
+		var result = "";
+
+		for (int i = 0; i < list.length; i++) {
+			if (list[i].matches("\\d{7}")) {
+
+				result = "[" + (i + 1) + "]番目の文字列[" + list[i] + "]は郵便番号である。";
+				inputPostCode = Integer.parseInt(list[i]);
+			}
+			;
+		}
+
+		result = result.isEmpty() ? "郵便番号が見つかりません。郵便番号は、7桁の数字である。" : result;
+
+		return result;
+	}
+
+	static String SearchPostCode(int inputPostCode) {
+		var result = "「該当郵便番号は見つからなかった」";
+
+		for (int i = 0; i < AddressTableManager.tableList.size(); i++) {
+			for (int j = 0; j < AddressTableManager.tableList.get(i).getTable().size(); j++) {
+				var table = AddressTableManager.tableList.get(i).getTable();
+
+				if (table.containsKey(inputPostCode)) {
+					result = "「郵便番号はテーブル[" + (i + 1) + "]にあり、町名は[" + table.get(inputPostCode) + "]である";
+					break;
+				}
+			}
+		}
+
+		return result;
+	}
+
+}
+
+
+
+
+
+
+
+//AddressTable.java
+package javatest;
+
+import java.util.HashMap;
+
+public class AddressTable {
+
+	private HashMap<Integer, String> table = new HashMap<Integer, String>();
+
+	public HashMap<Integer, String> getTable() {
+		return table;
+	}
+
+	public void add(Integer postCode, String address) {
+		this.table.put(postCode, address);
+	}
+
+	public void remove(Integer postCode) {
+		this.table.remove(postCode);
+	}
+
+}
+
+
+
+
+
+
+//AddressTableManager.java
+package javatest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddressTableManager {
+
+	static AddressTable table1 = new AddressTable();
+	static AddressTable table2 = new AddressTable();
+
+	static List<AddressTable> tableList = new ArrayList<AddressTable>();
+
+	public static void createTableList() {
+
+		// add table elements
+		table1.add(2100026, "堤根");
+		table1.add(2100825, "出来野");
+		table1.add(2100821, "殿町");
+		table1.add(2100806, "中島");
+		table1.add(2100818, "中瀬");
+
+		table2.add(2110032, "木月");
+		table2.add(2110031, "大町");
+		table2.add(2110033, "祇園町");
+		table2.add(2110021, "住吉町");
+		table2.add(2110061, "小杉");
+
+		// create tables to list
+		tableList.add(table1);
+		tableList.add(table2);
+	}
+
+}
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+eclipse 設定
+
+
+https://stackoverflow.com/questions/1959946/ctrl-space-in-eclipse-without-pressing-ctrl-space
+
+
+preferences
+↓
+
+content assist
+↓
+
+auto activation
+auto activation triggers for java:
+
+._abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ

@@ -1,0 +1,20 @@
+package javatest;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// 1.get input
+
+		var inputLine = InputHandler.GetInput();
+
+		// 2.print list
+
+		var strList = InputHandler.ChangeInputToArray(inputLine);
+		InputHandler.PrintInputList(strList);
+
+		// 3.check post code
+
+	}
+
+}

@@ -1,0 +1,44 @@
+package javatest;
+
+import java.util.Scanner;
+
+
+public class InputHandler {
+
+	public static String GetInput() {
+		
+		System.out.println("•¶Žš—ñ‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+
+		Scanner scan = new Scanner(System.in);
+		var input = scan.nextLine();
+		scan.close();
+
+		return input;
+		
+	}
+
+	
+	public static String[] ChangeInputToArray(String input) {
+		return input.split(",");
+	}
+	
+	
+	public static void PrintInputList(String[] inputList) {
+		System.out.println("“ü—Í‚µ‚½strList‚Í [");
+		
+		for (int i = 0; i < inputList.length; i++) {
+
+			if (i == (inputList.length - 1)) {
+				
+				System.out.print(inputList[i] + "]‚Å‚·");
+				break;
+			} 
+				
+			System.out.print(inputList[i]);
+			
+						
+		 }
+		
+	 }
+
+}

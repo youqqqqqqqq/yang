@@ -1,0 +1,15 @@
+package JSample;
+
+public class JSample7_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "Ç®ÇÕÇÊÇ§Ç≤Ç¥Ç¢Ç‹Ç∑ÅB";
+		str += "ìcíÜÇ≥ÇÒÅB";
+		System.out.println(str);
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,26 @@
+
+public class Ex11_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Num num1 = new Num(1, 10);
+		System.out.println(num1.showBiggerNum());
+	}
+
+}
+
+class Num {
+
+	private int n1;
+	private int n2;
+
+	public Num(int n1, int n2) {
+		this.n1 = n1;
+		this.n2 = n2;
+	}
+
+	public int showBiggerNum() {
+		int result = (n1 > n2) ? n1 : n2;
+		return result;
+	}
+}

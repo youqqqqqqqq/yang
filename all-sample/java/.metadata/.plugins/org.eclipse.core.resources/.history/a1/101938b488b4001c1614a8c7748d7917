@@ -1,0 +1,26 @@
+package Program;
+
+import java.util.Scanner;
+
+public class MainProgram {
+
+	public static void main(String[] args) {
+
+		var inputLine = ScanInput();
+		var numchecker = new NumChecker(inputLine);
+		
+		numchecker.CheckNum();
+		
+	}
+
+	private static String ScanInput() {
+
+		System.out.println("•¶Žš‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢:");
+		Scanner scan = new Scanner(System.in);
+		String inputStr = scan.nextLine();
+		scan.close();
+
+		return inputStr;
+
+	}
+}

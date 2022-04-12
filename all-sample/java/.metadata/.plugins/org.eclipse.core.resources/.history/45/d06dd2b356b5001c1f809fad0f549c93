@@ -1,0 +1,49 @@
+package javatest;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class InputHandler {
+
+	static Scanner scan = new Scanner(System.in);
+
+	public static String GetInput(Scanner scan) {
+
+		System.out.println("•¶š—ñ‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢:");
+		var input = scan.nextLine();
+		return input;
+
+	}
+
+	public static int GetInputPostCode(Scanner scan) {
+
+		int input = 0;
+		System.out.println("—X•Ö”Ô†(‚VŒ…”š)‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢:");
+
+		try {
+			input = scan.nextInt();
+		} catch (InputMismatchException e) {
+			System.out.println("“ü—Í‚³‚ê‚½‚Ì‚Í”š‚Å‚Í‚ ‚è‚Ü‚¹‚ñAI—¹‚µ‚Ü‚·");
+		}
+		
+		return input;
+	}
+
+	public static String[] ChangeInputToArray(String input) {
+
+		return input.split(",");
+	}
+
+	public static void PrintInputList(String[] inputList) {
+
+		System.out.print("“ü—Í‚µ‚½strList‚Í[");
+
+		for (int i = 0; i < inputList.length; i++) {
+			if (i == (inputList.length - 1)) {
+				System.out.println(inputList[i] + "]‚Å‚·B");
+				break;
+			}
+			System.out.print(inputList[i] + ",");
+		}
+	}
+}

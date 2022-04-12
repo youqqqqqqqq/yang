@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class JEx4_1 {
+
+	public static void main(String[] args) {
+		System.out.println("score Çì¸óÕÇµÇƒÇ≠ÇæÇ≥Ç¢");
+		Scanner scan = new Scanner(System.in);
+		int score = scan.nextInt();
+		scan.close();
+
+		if (score >= 60) {
+			System.out.println("60à»è„Ç≈Ç∑");
+
+		} else {
+			System.out.println("60ñ¢ñûÇ≈Ç∑");
+		}
+
+	}
+}

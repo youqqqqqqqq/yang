@@ -1,0 +1,32 @@
+package MySQLSample;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+
+
+import com.sun.jdi.connect.spi.Connection;
+
+public class JavaMYSQL {
+	
+	
+			
+			String user = "root";//MySQLのユーザ名を記入
+			String password = "root";//MySQLのパスワードを記入
+			String url = "jdbc:mysql://localhost:3306/companydata?serverTimezone=JST";//データベースパス記入
+
+
+	public static void main(String[] args) {
+		Connection con = null;//リンク変数生成
+		try {
+		con = DriverManager.getConnection(url, user, password);//リンクインスタンス生成
+		String createtable = "insert into empinfo(empCd,name,birthday,countryCd,sexCd,year) "
+		+ "values (\"100031\",\"ドラDもん\",\"2019-04-24\",\"011\",\"03\",0);";
+		PreparedStatement prepStmt1 = con.prepareStatement(createtable);
+		prepStmt1.execute();
+		con.close();//リンクを閉じる
+		} catch (SQLException e) {
+		    e.printStackTrace();
+		    }
+		}
+}

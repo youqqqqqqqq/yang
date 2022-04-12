@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" name="input_area">
+        お名前：<input type="text" name="name_input" value=""><br><br>
+        感想：<textarea name="textarea_input" value="" rows="2" cols="20"></textarea><br><br>
+        <input type="button" value="感想の表示" onclick="display()"><br><br>
+        <input type="button" value="消去" onclick="clr()">
+
+        <script>
+
+            function display() {
+                let name = document.input_area.name_input.value;
+                let think = document.input_area.textarea_input.value;
+                alert(name + "さんの感想は" + think);
+            }
+
+            function clr() {
+                document.input_area.name_input.value = "";
+                document.input_area.textarea_input.value = "";
+            }
+        </script>
+
+    </form>
+
+</body>
+
+</html>

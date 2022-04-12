@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="" name="info" onsubmit="return false;">
+        <div class="title">個人情報</div>
+
+        <div class="info">
+            <div class="flex-box padding">
+                姓(漢字): <input type="text" id="first_name_kannji" value="" size="8">
+                名(漢字): <input type="text" id="second_name_kannji" value="" size="8">
+            </div>
+            <div class="flex-box padding">
+                姓(カナ): <input type="text" id="first_name_kana" value="" size="8">
+                名(カナ): <input type="text" id="second_name_kana" value="" size="8">&nbsp;&nbsp;&nbsp;&nbsp;
+                性　別: <select name="sex" id="sex">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </div>
+            <div id="hobby" class="flex-box padding">
+                趣味:
+                <input type="checkbox" value="サッカー">サッカー
+                <input type="checkbox" value="フットサル">フットサル
+                <input type="checkbox" value="ダンス">ダンス
+                <input type="checkbox" value="旅行">旅行
+                <input type="checkbox" value="撮影">撮影
+            </div>
+        </div>
+
+        <div class="btn">
+            <button class="btn-item" onclick="location.reload()">リセット</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn-item"  onclick="setResults();displayResult()">決定</button>
+        </div>
+
+    </form>
+
+    1.初期表示が全て未入力／未選択の状態<br>
+    2.「リセット」ボタン押下たら、初期表示状態に戻す
+
+
+    <table id="result" class="undisplay">
+        <tr>
+            <td>姓(漢字):</td>
+            <td id="first_name_kannji_result">xxx</td>
+        </tr>
+        <tr>
+            <td>名(漢字):</td>
+            <td id="second_name_kannji_result">xxx</td>
+        </tr>
+        <tr>
+            <td>姓(カナ):</td>
+            <td id="first_name_kana_result">xxx</td>
+        </tr>
+        <tr>
+            <td>名(カナ):</td>
+            <td id="second_name_kana_result">xxx</td>
+        </tr>
+        <tr>
+            <td>性別:</td>
+            <td id="sex_result">xxx</td>
+        </tr>
+        <tr>
+            <td>趣味:</td>
+            <td id="hobby_result">xxx</td>
+        </tr>
+    </table>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

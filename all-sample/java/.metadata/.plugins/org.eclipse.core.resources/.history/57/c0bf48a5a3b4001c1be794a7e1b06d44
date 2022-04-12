@@ -1,0 +1,21 @@
+package javatest;
+
+import java.util.Scanner;
+
+public class InputHandler {
+
+	public static String GetInput() {
+
+		Scanner scan = new Scanner(System.in);
+		var input = scan.nextLine();
+		scan.close();
+		
+		return input;
+
+	}
+
+	public static String[] ChangeInputToArray(String input) {
+		return input.split(",");
+	}
+
+}

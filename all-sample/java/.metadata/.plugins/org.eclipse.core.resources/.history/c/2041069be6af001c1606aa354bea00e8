@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class JEx4_1 {
+
+	public static void main(String[] args) {
+		System.out.println("score ‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+		Scanner scan = new Scanner(System.in);
+		int score =  scan.nextInt();
+		
+		System.out.println(score);
+		
+	}
+}

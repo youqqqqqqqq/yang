@@ -1,0 +1,16 @@
+import java.util.Date;
+
+public class JSample8_6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String strDate = "aa2018-12-31";
+		Date sqLDate = java.sql.Date.valueOf(strDate);
+		System.out.println(sqLDate);
+	}
+}
+
+//reference
+
+//https:// surleconomiejp.blogspot.com/2015/10/trycatchthrow.html

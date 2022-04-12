@@ -1,0 +1,22 @@
+
+public class Ex11_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+//		int a;
+
+//		System.out.println(a);
+
+	}
+
+}
+
+//class Num {
+//	
+//	public int test(int n1, int n2) {
+//		int result;
+//		return result;
+//
+//	}
+//}
